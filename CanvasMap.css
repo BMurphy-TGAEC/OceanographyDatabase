@@ -19,8 +19,8 @@
 	position:relative;
 	left:0px;
 	top:0px; 
-	/*width:800px;
-	height:552px; */
+	width:800px;
+	height:552px; 
 	
 	/* The user-select css styles are used to prevent selectable text within the CM_MapContainer */
  	-webkit-touch-callout: none;
