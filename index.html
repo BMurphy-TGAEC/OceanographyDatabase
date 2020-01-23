@@ -138,7 +138,42 @@ var column = 0;
 
 //https://www.aspsnippets.com/Articles/Read-Parse-and-display-CSV-Text-file-using-JavaScript-jQuery-and-HTML5.aspx
 function Upload() {
-	var fileUpload = document.getElementById("fileUpload");
+
+	//var fileUpload = document.getElementById("fileUpload");
+	
+	//fileUpload = document.readAsDataURL(file);
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//XML request in here
+	
+	
+	
+	var xhttp = new XMLHttpRequest();
+    	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("fileUpload").innerHTML =
+			this.responseText;
+		}
+	};
+	xhttp.open("GET", "/OceanographyDatabase/test_TSV.txt", true);
+	xhttp.send();
+	
+	
+	
+	//XML request in here
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 	
 	//fileUpload = document.readAsDataURL(file);
 	var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.csv|.txt|.tsv)$/;
